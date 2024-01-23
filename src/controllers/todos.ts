@@ -16,4 +16,12 @@ export const createTodo = (req: Request, res: Response, next: NextFunction) => {
     catch(err){
         console.log(err);
     }
+}
+
+export const getTodos = (req: Request, res: Response, next: NextFunction) => {
+    try{
+        res.status(201).json({todos: todos});
+    } catch(err){
+        console.log(err);
+    }
 };
